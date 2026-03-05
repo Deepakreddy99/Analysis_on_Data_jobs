@@ -80,7 +80,7 @@ All insights are generated from query outputs (CSV/JSON) and visualized below.
 ---
 
 ## Database Schema (ER Diagram)
-
+```mermaid
 erDiagram
     COMPANY_DIM ||--o{ JOB_POSTINGS_FACT : posts
     JOB_POSTINGS_FACT ||--o{ SKILLS_JOB_DIM : requires
@@ -123,8 +123,7 @@ erDiagram
         int job_id PK, FK
         int skill_id PK, FK
     }
-
-
+```
 
 ---
 
