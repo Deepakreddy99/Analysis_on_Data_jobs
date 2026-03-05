@@ -61,7 +61,7 @@ erDiagram
 
 **Chart**
 
-![1) Top Paying Data Analyst Jobs](images/top_paying_jobs.png)
+![1) Top Paying Data Analyst Jobs]([images/top_paying_jobs.png](https://github.com/Deepakreddy99/Analysis_on_Data_jobs/blob/a0bcdec054ee38412159d1a5339b0a148502418c/charts%20and%20quarry/top_paying_jobs.png))
 
 **Insight**
 
@@ -90,9 +90,7 @@ WHERE
     LIMIT 10
 ```
 
-**Query Screenshot**
 
-![Query - 1) Top Paying Data Analyst Jobs](images/top_paying_jobs_query.png)
 
 ---
 
@@ -100,7 +98,7 @@ WHERE
 
 **Chart**
 
-![2) Top Demanded Skills](images/top_demanded_skills.png)
+![2) Top Demanded Skills]([images/top_demanded_skills.png](https://github.com/Deepakreddy99/Analysis_on_Data_jobs/blob/a0bcdec054ee38412159d1a5339b0a148502418c/charts%20and%20quarry/top_demanded_skills.png))
 
 **Insight**
 
@@ -139,9 +137,7 @@ ORDER BY demand_count DESC
 LIMIT 10
 ```
 
-**Query Screenshot**
 
-![Query - 2) Top Demanded Skills](images/top_demanded_skills_query.png)
 
 ---
 
@@ -149,7 +145,7 @@ LIMIT 10
 
 **Chart**
 
-![3) Highest Paying Skills](images/top_paying_skills.png)
+![3) Highest Paying Skills]([images/top_paying_skills.png](https://github.com/Deepakreddy99/Analysis_on_Data_jobs/blob/a0bcdec054ee38412159d1a5339b0a148502418c/charts%20and%20quarry/top_paying_skills.png))
 
 **Insight**
 
@@ -172,9 +168,7 @@ ORDER BY  Avg_salary DESC
 LIMIT 10
 ```
 
-**Query Screenshot**
 
-![Query - 3) Highest Paying Skills](images/top_paying_skills_query.png)
 
 ---
 
@@ -211,9 +205,7 @@ JOIN skills_dim AS sd ON sd.skill_id = sj.skill_id
 ORDER BY tp.salary_year_avg DESC
 ```
 
-**Query Screenshot**
 
-![Query - Skills in Top Paying Jobs](images/top_paying_job_skills_query.png)
 
 ---
 
@@ -221,7 +213,7 @@ ORDER BY tp.salary_year_avg DESC
 
 **Chart**
 
-![5) Optimal Skills (High Demand + High Salary)](images/optimal_skills_scatter.png)
+![5) Optimal Skills (High Demand + High Salary)]([images/optimal_skills_scatter.png](https://github.com/Deepakreddy99/Analysis_on_Data_jobs/blob/a0bcdec054ee38412159d1a5339b0a148502418c/charts%20and%20quarry/optimal_skills_scatter.png))
 
 **Insight**
 
@@ -272,39 +264,6 @@ ORDER BY ds.demand_count DESC, a.avg_salary DESC
 LIMIT 25;
 ```
 
-**Query Screenshot**
 
-![Query - 5) Optimal Skills (High Demand + High Salary)](images/optimal_skills_query.png)
 
----
 
-## What I Added (Portfolio Upgrades)
-
-- ✅ **Graphs/Charts** (saved under `images/`)
-- ✅ **SQL code blocks** embedded under each section
-- ✅ **Query screenshots** (rendered images of the SQL) to make the repo visually strong
-- ✅ **ER diagram** (Mermaid) to explain the schema clearly
-
-## Suggested Repo Structure
-
-```
-.
-├─ sql/
-│  ├─ Top_paying_jobs.sql
-│  ├─ Top_demanded_skills.sql
-│  ├─ Top_skills_on_$.sql
-│  ├─ Top_paying_on_skills.sql
-│  └─ Optimal_skills.sql
-├─ data/
-│  ├─ Top paying jobs.csv
-│  ├─ Top Demanded skills.csv
-│  ├─ top skills based on pay.csv
-│  ├─ Top paying on skills.csv
-│  └─ Optimal skills.csv
-└─ images/
-   ├─ top_paying_jobs.png
-   ├─ top_demanded_skills.png
-   ├─ top_paying_skills.png
-   ├─ optimal_skills_scatter.png
-   └─ *_query.png
-```
