@@ -59,23 +59,6 @@ The dataset contains job postings along with associated skills and salary inform
 These tables were joined to analyze relationships between **skills, job demand, and salaries.**
 
 ---
-## Analysis Overview
-This portfolio project analyzes the **Data Analyst** job market using SQL to answer:
-
-- **Top paying Data Analyst jobs**
-- **Most demanded skills**
-- **Highest paying skills**
-- **Optimal skills** (high demand + strong salary)
-
-All insights are generated from query outputs (CSV/JSON) and visualized below.
-
----
-
-## Tech Stack
-- SQL (PostgreSQL-style syntax)
-- Fact + dimension data model
-- Python (for charts)
-- GitHub for documentation
 
 ---
 
