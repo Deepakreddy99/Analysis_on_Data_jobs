@@ -81,37 +81,50 @@ All insights are generated from query outputs (CSV/JSON) and visualized below.
 
 ## Database Schema (ER Diagram)
 
-```mermaid
 erDiagram
-    JOB_POSTINGS_FACT ||--o{ SKILLS_JOB_DIM : has
-    SKILLS_DIM ||--o{ SKILLS_JOB_DIM : defines
     COMPANY_DIM ||--o{ JOB_POSTINGS_FACT : posts
-
-    JOB_POSTINGS_FACT {
-        int job_id PK
-        text job_title_short
-        numeric salary_year_avg
-        boolean job_work_from_home
-        int company_id FK
-    }
+    JOB_POSTINGS_FACT ||--o{ SKILLS_JOB_DIM : requires
+    SKILLS_DIM ||--o{ SKILLS_JOB_DIM : defines
 
     COMPANY_DIM {
         int company_id PK
         text name
+        text link
+        text link_google
+        text thumbnail
+    }
+
+    JOB_POSTINGS_FACT {
+        int job_id PK
+        int company_id FK
+        varchar job_title_short
+        text job_title
+        text job_location
+        text job_via
+        text job_schedule_type
+        boolean job_work_from_home
+        text search_location
+        timestamp job_posted_date
+        boolean job_no_degree_mention
+        boolean job_health_insurance
+        text job_country
+        text salary_rate
+        numeric salary_year_avg
+        numeric salary_hour_avg
     }
 
     SKILLS_DIM {
         int skill_id PK
         text skills
+        text type
     }
 
     SKILLS_JOB_DIM {
-        int job_id FK
-        int skill_id FK
+        int job_id PK, FK
+        int skill_id PK, FK
     }
-```
 
-> Tip: If Mermaid doesn’t render on your GitHub view, export an ERD as `images/schema.png` and embed it.
+
 
 ---
 
